@@ -1,5 +1,5 @@
 [package]
-name = "rqlite-ha421"
+name = "rqlite"
 version = "0.1.2"
 edition = "2018"
 description = "An async implementation of a rqlite client"
@@ -10,7 +10,7 @@ repository = "https://github.com/HaHa421/sqlx-rqlite/crates/rqlite-rs"
 homepage = "https://codeberg.org/zesty/rqlite-rs"
 documentation = "https://docs.rs/rqlite/"
 
-categories = ["async", "database"]
+categories = ["database"]
 keywords   = ["rqlite"]
 
 

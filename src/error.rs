@@ -1,6 +1,6 @@
 use crate::rqlite;
 use std::error::Error as StdError;
-use std::fmt::{self, Display, Formatter};
+use std::fmt::{self, Debug, Display, Formatter};
 use std::{borrow::Cow /*, str::from_utf8_unchecked*/};
 /*
 use libsqlite3_sys::{
@@ -44,7 +44,7 @@ impl StdError for RqliteError {}
 impl DatabaseError for RqliteError {
     #[inline]
     fn message(&self) -> &str {
-        self.inner.description()
+        "Rqlite database error"
     }
 
     /// The extended result code.

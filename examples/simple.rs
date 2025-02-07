@@ -9,7 +9,7 @@ async fn main() -> Result<(), sqlx::Error> {
     let host = if std::env::args().len() > 1 {
       std::env::args().nth(1).unwrap().to_string()
     } else {
-      "locahost".into()
+      "localhost".into()
     };
     // Create a connection pool
     //  for MySQL/MariaDB, use MySqlPoolOptions::new()
@@ -71,7 +71,7 @@ async fn main() -> Result<(), sqlx::Error> {
         .execute(&pool)
         .await?;
     
-    sqlx::query("DROP _sqlx_rqlite_test_user_")
+    sqlx::query("DROP TABLE _sqlx_rqlite_test_user_")
         .execute(&pool)
         .await?;
         
